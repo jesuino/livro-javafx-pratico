@@ -104,3 +104,5 @@ public class ImagemFigurasGeometricas extends Application {
 10. Finalmente usamos um novo método dos filhos do grupo que é adicionar todos os nossos nós de uma vez. Podemos fazer isso, ou adicionar um por um.
 
 Por fim, ao executear o código acima, isso é o que deveria aparecer:
+
+![](../imagens/telas/ImagemFigurasGeometricas.png)
