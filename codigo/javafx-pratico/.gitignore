@@ -1,0 +1,23 @@
+*.class
+
+# Package Files 
+*.jar
+*.war
+*.ear
+
+# Maven Build
+target/
+
+# Eclipse directories
+bin/
+.settings
+.classpath
+.project
+
+# Forge file
+.forge_settings
+
+# Mac File
+*.DS_Store
+
+*~
