@@ -3,6 +3,8 @@ JavaFX Prático
 
 Um livro rápido, direto, sem muita enrolação. Objetivo é introduzir os conceitos da plataforma JavaFX com evolução natural dos conceitos sem que haja buracos no aprendizado dos componentes básicos da plataforma.
 
+Notem que esse livro é baseado no blog [Aprendendo JavaFX](http://aprendendo-javafx.blogspot.com.br/), mas revisado, editado e formatado para ficar no formato de um livro!
+
 
 ## Software Necessário
 
