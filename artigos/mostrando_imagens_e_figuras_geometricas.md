@@ -105,4 +105,4 @@ public class ImagemFigurasGeometricas extends Application {
 
 Por fim, ao executear o código acima, isso é o que deveria aparecer:
 
-![](../imagens/telas/ImagemFigurasGeometricas.png)
+![ImagemFigurasGeometricas](../imagens/telas/ImagemFigurasGeometricas.png)
