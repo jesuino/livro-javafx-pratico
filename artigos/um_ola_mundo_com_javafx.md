@@ -65,8 +65,4 @@ Essa é uma das aplicações mais básicas que você pode fazer com JavaFX! Voc�
 10. O palco precisa de uma cena, simplesmente é isso que é feito nessa linha.
 11. Simplesmente mostrando o palco! Se esse método não for chamado, nada irá acontecer quando executar esse código.
 
-Pronto! Muita coisa nova, né? Mas não desista, no decorrer dos artigos você vai ficando cada vez mais confortável com JavaFX e esses componentes!
-
-
-
-
+Pronto! Muita coisa nova, né? Mas não desista, no decorrer dos artigos você vai ficando cada vez mais confortável com JavaFX e seus componentes!
