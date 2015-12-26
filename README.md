@@ -1,4 +1,4 @@
-My Awesome Book
+JavaFX Prático
 =======
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+Um livro rápido, direto, sem muita enrolação. Objetivo é introduzir os conceitos da plataforma JavaFX com evolução natural dos conceitos sem que haja buracos no aprendizado dos componentes básicos da plataforma.
