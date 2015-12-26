@@ -4,11 +4,12 @@ Nesse primeiro artigo vamos mostrar um passo a passo de como executar sua primei
 
 *Antes de prosseguir, confira se você instalou o JDK 8 da Oracle corretamente na sua máquina e também o Eclipse!*
 
-Ótimo! Já temos tudo o que precisamos. O próximo passo agora é abrir o Eclipse e criar um projeto do tipo Java Project(1). Nesse projeto iremos criar um pacote(2) e nele uma classe Java(3).
+Ótimo! Já temos tudo o que precisamos. O próximo passo agora é abrir o Eclipse e criar um projeto do tipo **Maven Project**. Nesse projeto iremos criar um pacote e nele uma classe Java. Veja abaixo uma explicação mais detalhada (nomes em negrito e itálico entre parêntesis foram os que eu usei):
 
-1. Acesse o menu **File -> New -> Java**** Project, dê um nome (no meu caso ***javafx-pratico***) e clique em **Finish** (OBS: certifique-se que você está usando o Java 8 como o Java do seu projeto ou tudo em seguida vai falhar);
-2. Clique com o botão direto sobre o seu projeto e acesse o menu New -> Package, dê um nome (no meu caso **javafxpratico****) e em seguida clique em **Finish**;
-3. Clique com o botão direito no pacote main e acesse o menu **New -> Class****. Dê um nome para a classe (eu usei ***OlaMundoJavaFX***) e clique em **Finish**.
+1. Acesse o menu ***File -> New -> Maven Project***, marque a opção "Create a simple project (skip archetype selection)", preencha os valores para **groupId**(***org.javafxpratico***), **artifact-id**(***javafx-pratico***), **version**(***1.0***)  e clique em **Finish**;
+2. Clique com o botão direto sobre o seu projeto e acesse o menu ***New -> Package***, dê um nome (***javafxpratico***) e em seguida clique em **Finish**;
+3. Clique com o botão direito no pacote main e acesse o menu ***New -> Class***. Dê um nome para a classe (eu usei ***OlaMundoJavaFX***) e clique em **Finish**.
 
 
-Pronto, é nesse mesmo projeto que iremos explorar o JavaFX
+Pronto! É nesse mesmo projeto que iremos explorar o JavaFX. O código da classe OlaMundoJavaFX deve se parecer com o seguinte:
+
