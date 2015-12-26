@@ -7,7 +7,7 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class OlaMundoJavaFX extends Application { // 1
-
+	
 	public static void main(String[] args) {
 		launch(); // 2
 	}
