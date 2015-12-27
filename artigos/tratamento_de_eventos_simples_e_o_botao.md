@@ -41,7 +41,7 @@ public class TratadorEvento implements EventHandler { // 1
 
 Mas de quem esse tratador de evento trata eventos? O próximo passo é informar para um botão qual será o seu tratador de evento. Veja abaixo que uso duas linhas para isso e basicamente criamos um botão e informamos quem será o tratador de evento através do método *setOnAction*.
 
-Ótimo, já sabemos tratar eventos, mas e se você não quiser criar uma classe para toda vez que quiser tratar um clique? Você pode utilizar um classe anônima ou as modernas expressões Lambds.
+Ótimo, já sabemos tratar eventos, mas e se você não quiser criar uma classe para toda vez que quiser tratar um clique? Você pode utilizar um classe anônima ou as modernas expressões lambdas.
 
 Para ilustrar tudo isso, criamos uma simples aplicação com três botões e as três formas de se registar um tratador de evento. O código abaixo mostra essa aplicação e também explica diretamente no comentário!
 
