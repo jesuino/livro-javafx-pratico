@@ -1,6 +1,5 @@
 # Tocando Vídeo
 
-## Carregando, tocando e mostrando um vídeo
 Tocar vídeo em JavaFX é tão simples que chega a assustar quem já tentou tocar um vídeo usando Java. Nós só temos que seguir três pequenos passos:
 
 * **Carregar**: Você primeiramente deve carregar a mídia que vai tocar. A mídia pode estar no seu disco rígido como em um um servidor remoto(carregando assim através da sua URL);
