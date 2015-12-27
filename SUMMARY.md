@@ -7,5 +7,4 @@
    * [Tocando Áudio](artigos/tocando_audio.md)
    * [Tocando Vídeo](artigos/tocando_video.md)
    * [Rótulos, campos de texto, separadores e controles deslizantes](rotulos,_campos_de_texto,_separadores_e_controles_.md)
-       * Tratamento de eventos e o botão
 
