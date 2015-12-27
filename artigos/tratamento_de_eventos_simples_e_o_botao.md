@@ -24,14 +24,11 @@ Vamos começar mostrando um exemplo do clássico clique em mim para assim demons
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
-public class TratadorEvento implements EventHandler { // 1
+public static class TratadorEvento implements EventHandler<ActionEvent> { // 1
 
-
- @Override
- public void handle(ActionEvent evento) { // 2
-  System.out.println("Evento tratado por uma classe externa");
- }
-
+	public void handle(ActionEvent evento) { // 2
+		System.out.println("Evento tratado por uma classe externa");
+	}
 }
 ```
 
@@ -43,10 +40,12 @@ Mas de quem esse tratador de evento trata eventos? O próximo passo é informar 
 
 Ótimo, já sabemos tratar eventos, mas e se você não quiser criar uma classe para toda vez que quiser tratar um clique? Você pode utilizar um classe anônima ou as modernas expressões lambdas.
 
-Para ilustrar tudo isso, criamos uma simples aplicação com três botões e as três formas de se registar um tratador de evento. O código abaixo mostra essa aplicação e também explica diretamente no comentário!
+Para ilustrar tudo isso, criamos uma simples aplicação com dois botões e três formas de se registar um tratador de evento. O código abaixo mostra essa aplicação e também explica diretamente no comentário!
 
 
 ```java
+package javafxpratico;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -57,49 +56,66 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 //Se quisermos que essa classe trate evento, ela deve herdar de EventHandler
-public class Principal extends Application implements EventHandler {
+public class TratamentoEventoComBotao extends Application 
+			implements EventHandler<ActionEvent> {
 
- public static void main(String[] args) {
-  launch();
- }
+	public static void main(String[] args) {
+		launch();
+	}
 
- @Override
- public void start(Stage palco) throws Exception {
-  VBox raiz = new VBox(20);
-  raiz.setAlignment(Pos.CENTER);
-  raiz.setTranslateY(5);
+	@Override
+	public void start(Stage palco) throws Exception {
+		VBox raiz = new VBox(20);
+		raiz.setAlignment(Pos.CENTER);
+		raiz.setTranslateY(5);
 
-  Button botao1 = new Button("Clique em mim! (Tratador externo)");
-  Button botao2 = new Button("Clique em mim! (Class Anônima)");
-  Button botao3 = new Button("Clique em mim! (Própria classe)");
+		Button botao1 = new Button("Clique em mim! (Tratador externo)");
+		Button botao2 = new Button("Clique em mim! (Expressão Lambda)");
+		Button botao3 = new Button("Clique em mim! (Própria classe)");
 
-  // usamos a classe TratadorEvento para cuidar dos eventos
-  botao1.setOnAction(new TratadorEvento());
-  // Criando uma instância de uma classe anônima para tratar evento
-  botao2.setOnAction(new EventHandler() {
+		// usamos a classe TratadorEvento para cuidar dos eventos
+		botao1.setOnAction(new TratadorEvento());
+		// Criando uma instância de uma classe anônima para tratar evento
+		botao2.setOnAction(new EventHandler<ActionEvent>() {
 
-   @Override
-   public void handle(ActionEvent evento) {
-    System.out.println("Evento tratado por uma classe anônima!");
-   }
-  });
-  // o botão 3 usa essa própria classe para tratar seus eventos
-  botao3.setOnAction(this);
+			public void handle(ActionEvent evento) {
+				System.out.println("Evento tratado por uma classe anônima!");
+			}
+		});
+		// o botão 3 usa essa própria classe para tratar seus eventos
+		botao3.setOnAction(this);
 
-  raiz.getChildren().addAll(botao1, botao2, botao3);
+		raiz.getChildren().addAll(botao1, botao2, botao3);
 
-  Scene cena = new Scene(raiz, 300, 200);
-  palco.setTitle("Tratando eventos");
-  palco.setScene(cena);
-  palco.show();
+		Scene cena = new Scene(raiz, 300, 200);
+		palco.setTitle("Tratando eventos");
+		palco.setScene(cena);
+		palco.show();
 
- }
+	}
 
- @Override
- public void handle(ActionEvent evento) {
-  System.out.println("Evento tratado na próxima classe!");
- }
+	/* 
+	 * Como a própria classe TratamentoEventoComBotao implementa 
+	 * a interface EventHandler, ela mesma pode responder a eventos do botão
+	 * 
+	 */
+	public void handle(ActionEvent evento) {
+		System.out.println("Evento tratado na próxima classe!");
+	}
+	
+    /**
+	 * Uma classe para tratar os eventos 
+	 * poderia ser uma classe externa
+	 *
+	*/
+	public static class TratadorEvento implements EventHandler<ActionEvent> { // 1
+
+		 public void handle(ActionEvent evento) { // 2
+		  System.out.println("Evento tratado por uma classe externa");
+		 }
+	}
 }
 ```
 
-A aplicação final bem como o que será impresso no console é mostrado na imagem abaixo
+A aplicação final bem como o que será impresso no console é mostrado na imagem abaixo:
+![](../imagens/telas/tratando_eventos.png)
