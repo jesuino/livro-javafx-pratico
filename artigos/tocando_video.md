@@ -1,4 +1,4 @@
-# Tocando Áudio e Vídeo
+# Tocando Vídeo
 
 ## Carregando, tocando e mostrando um vídeo
 Tocar vídeo em JavaFX é tão simples que chega a assustar quem já tentou tocar um vídeo usando Java. Nós só temos que seguir três pequenos passos:
