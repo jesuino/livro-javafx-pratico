@@ -6,4 +6,5 @@
    * [Mostrando Imagens e Figuras Geométricas](artigos/mostrando_imagens_e_figuras_geometricas.md)
    * [Tocando Áudio](artigos/tocando_audio.md)
    * [Tocando Vídeo](artigos/tocando_video.md)
+   * Rótulos, campos de texto, separadores e controles deslizantes
 
