@@ -6,6 +6,6 @@
    * [Mostrando Imagens e Figuras Geométricas](artigos/mostrando_imagens_e_figuras_geometricas.md)
    * [Tocando Áudio](artigos/tocando_audio.md)
    * [Tocando Vídeo](artigos/tocando_video.md)
-   * [Rótulos, campos de texto, separadores e controles deslizantes](.artigos/rotulos,campos_de_texto_,separadores_e_controles__.md)
+   * [Rótulos, campos de texto, separadores e controles deslizantes](artigos/rotulos,campos_de_texto_,separadores_e_controles__.md)
    * [Tratamento de eventos simples e o botão](artigos/tratamento_de_eventos_simples_e_o_botao.md)
 
