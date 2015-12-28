@@ -9,5 +9,5 @@
    * [Rótulos, campos de texto, separadores e controles deslizantes](artigos/rotulos_campos_de_texto_separadores_e_controles_.md)
    * [Tratamento de eventos simples e o botão](artigos/tratamento_de_eventos_simples_e_o_botao.md)
    * [Radio Button, CheckBox e ToggleButton](artigos/radio_button_checkbox_togglebutton.md)
-   * ComboBox e ChoiceBox
+   * [ComboBox e ChoiceBox](artigos/combobox_e_choicebox.md)
 
