@@ -43,7 +43,8 @@ import javafx.stage.Stage;
 
 public class ImagemFigurasGeometricas extends Application {
 
-	private final String IMG_URL = "http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/402460.gif";
+	private final String IMG_URL =
+	"http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/402460.gif";
 
 	public static void main(String[] args) {
 		launch();
@@ -83,8 +84,9 @@ public class ImagemFigurasGeometricas extends Application {
 		elipse.setFill(Color.BLUE);
 
 		Group componentes = new Group(); // 9
-		componentes.getChildren().addAll(visualizadorImagem, textoInformativo, retangulo, circulo, circuloBranco,
-				elipse); // 10
+		componentes.getChildren().addAll(visualizadorImagem, 
+		    textoInformativo, retangulo, circulo, 
+		    circuloBranco,elipse); // 10
 		Scene cena = new Scene(componentes, 400, 150);
 		palco.setTitle("Gráficos e Imagens em JavaFX");
 		palco.setScene(cena);
