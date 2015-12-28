@@ -15,7 +15,9 @@ import javafx.stage.Stage;
 public class TocandoAudio extends Application {
 
 	// Áudio pego do seguinte site: http://sampleswap.org/mp3/song.php?id=105
-	private String AUDIO_URL = "http://sampleswap.org/mp3/artist/5101/Peppy--The-Firing-Squad_YMXB-160.mp3";
+	private String AUDIO_URL = 
+	"http://sampleswap.org/mp3/artist/5101/" + 
+	"Peppy--The-Firing-Squad_YMXB-160.mp3";
 
 	public static void main(String[] args) {
 		launch();
