@@ -136,5 +136,4 @@ public class RadioCheckToggle extends Application {
 Nossa aplicação final se parece com o seguinte:
 
 
-
-
+![](../imagens/telas/RadioCheckToggle.png)
