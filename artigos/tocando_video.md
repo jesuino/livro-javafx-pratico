@@ -22,8 +22,10 @@ import javafx.stage.Stage;
 
 public class TocandoVideo extends Application {
 
-	// Vídeo de exemplo pego desse site: http://www.mediacollege.com/adobe/flash/video/tutorial/example-flv.html
-	private String VIDEO_URL = "http://www.mediacollege.com/video-gallery/testclips/20051210-w50s.flv";
+	// Vídeo de exemplo pego desse site:
+	// http://www.mediacollege.com/adobe/flash/video/tutorial/example-flv.html
+	private String VIDEO_URL =
+	"http://www.mediacollege.com/video-gallery/testclips/20051210-w50s.flv";
 	
 	public static void main(String[] args) {
 		launch();
