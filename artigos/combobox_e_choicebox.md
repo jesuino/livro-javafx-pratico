@@ -81,3 +81,6 @@ public class TestandoComboBox extends Application {
 
 
 Por fim, essa é a aplicação resultante:
+
+
+![](../imagens/telas/combobox.png)
