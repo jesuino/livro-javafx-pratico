@@ -6,7 +6,7 @@ O JavaFX traz alguns gerenciadores pronto para auxiliar você. Nesse capítulo v
 
 ### O que é um gerenciador de leiaute?
 
-O conceito é bem simples. Quando você vai criar sua aplicação, a "telinha" dela, você tem necessidades comuns de posicionamento e dimensionamento dos componentes. Exemplo: as vezes você quer colocar eles alinhados verticalmente ou orizontalmente, quer empilhar, colocar em uma "grade" e por aí vai. Fazer isso na mão já é difícil e ainda teremos que recriar o código para cada nova aplicação que escrevermos...
+O conceito é bem simples. Quando você vai criar sua aplicação, a "telinha" dela, você tem necessidades comuns de posicionamento e dimensionamento dos componentes. Exemplo: as vezes você quer colocar eles alinhados verticalmente ou horizontalmente, quer empilhar, colocar em uma "grade" e por aí vai. Fazer isso na mão já é difícil e ainda teremos que recriar o código para cada nova aplicação que escrevermos...
 Um gerenciador de leiaute é uma classe que faz esse gerenciamento para você de acordo com uma forma de posicionamento já estabelecida. Em termos práticos, a classe **VBox**, por exemplo, organiza os componentes verticalmente e podemos adicionar nela os componentes de nossa aplicação como os botões, rótulos, tabelas, ou até outros gerenciadores de leiaute. As principais classes do JavaFX que exercem essa função são:
 
 * **VBox:** Alinha os componentes verticalmente;
@@ -35,7 +35,7 @@ Há outros métodos. As listas observáveis são poderosas classes do mundo Java
 
 ### Conhecendo na prática
 
-Depois de tanto conceito e uma pequena exploração da API, vamos criar aplicações simples que usam essas classes e dessa forma vamos ver em ação tudo que falamos, tornando mais prazeroso o aprendizado e a exploração da API. Hoje vamos mostrar só três classes: **VBox**, **HBox** e **StackPane**(quem leu posts anteriores sabe que já usamos essas classes aqui).
+Depois de tanto conceito e uma pequena exploração da API, vamos criar aplicações simples que usam essas classes e dessa forma vamos ver em ação tudo que falamos, tornando mais prazeroso o aprendizado e a exploração da API. Hoje vamos mostrar só três classes: **VBox**, **HBox** e **StackPane**.
 
 #### VBox
 Um dos gerenciadores mais simples, a classe VBox simplesmente alinha os componentes verticalmente e permite determinar o espaçamento entre eles e ainda o alinhamento. Abaixo um código que simplesmente adiciona umas forma geométricas a uma VBox e em seguida a explicação do mesmo.
@@ -95,11 +95,12 @@ public class PraticaVBox extends Application {
 
 O resultado está abaixo. Lembre-se de sempre fuçar bastante as classes, essa é a melhor forma de aprender e se diverter :)
 
-IMG VBOX
+![](../imagens/telas/TestandoVBox.png)
 
 #### HBox
 Não iremos entrar em detalhes dessa classe por que ela trabalha exatamente igual a VBox, com exceção que ela alinha os componentes horizontalmente. Abaixo temos uma imagem de como o código acima se comportaria simplesmente trocar a "instanciação" de VBox para HBox.
 
+![](../imagens/telas/TestandoHBox.png)
 
 #### StackPane
 Um comportamento não muito comum, mas que pode ser útil em diversas aplicações, é o trazido pela classe **StackPane**. Nela os componentes são empilhados uns nos outros, ou seja, quem entrou primeiro fica embaixo do segundo e assim por diante. O exemplo de código abaixo mostra isso muito claramente. Perceba que não iremos explicar o código pois ele é semelhante ao mostrado anteriormente, a exceção está no resultado visual. Estamos desenhando uma bandeira do Brasil (ou tentando), para isso criamos um retângulo, um losango um círculo e, o mais díficil, um arco. Usamos as formas geométricas do JavaFX para fazer isso e no fim colocamos em um gerenciador do tipo StackPane, veja que ele empilha as imagens de forma que por final temos algo que é quase uma bandeira do Brasil... Quase...
@@ -168,8 +169,8 @@ public class PraticaStackPane extends Application {
 	}
 
 }
-````
+```
 
 Mais uma vez note que a ordem que adicionamos os componentes é muito importante. Veja o resultado:
 
-IMG BANDEIRA DO BRASIL
+![](../imagens/telas/TestandoStackPane.png)
