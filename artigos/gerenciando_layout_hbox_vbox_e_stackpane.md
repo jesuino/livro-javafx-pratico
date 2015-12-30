@@ -41,25 +41,49 @@ Depois de tanto conceito e uma pequena exploração da API, vamos criar aplicaç
 Um dos gerenciadores mais simples, a classe VBox simplesmente alinha os componentes verticalmente e permite determinar o espaçamento entre eles e ainda o alinhamento. Abaixo um código que simplesmente adiciona umas forma geométricas a uma VBox e em seguida a explicação do mesmo.
 
 ```java
-VBox caixaVertical = new VBox(); // 1
-caixaVertical.setSpacing(5); // 2
-caixaVertical.setAlignment(Pos.CENTER); // 3
+package javafxpratico;
 
-//4
-caixaVertical.setTranslateX(10);
-caixaVertical.setTranslateY(20);
+import javafx.application.Application;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 
-// 5
-Rectangle retanguloAzul = new Rectangle(40, 20);
-Rectangle retanguloVerde = new Rectangle(40, 20);
-Rectangle retanguloVermelho = new Rectangle(40, 20);
+public class PraticaVBox extends Application {
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
 
-retanguloAzul.setFill(Color.BLUE);
-retanguloVerde.setFill(Color.GREEN);
-retanguloVermelho.setFill(Color.RED);
-  
-//6
-caixaVertical.getChildren().addAll(retanguloAzul, retanguloVerde, retanguloVermelho);
+	@Override
+	public void start(Stage stage) throws Exception {
+		VBox caixaVertical = new VBox(); // 1
+		caixaVertical.setSpacing(5); // 2
+		caixaVertical.setAlignment(Pos.CENTER); // 3
+
+		// 4
+		caixaVertical.setTranslateX(10);
+		caixaVertical.setTranslateY(20);
+
+		// 5
+		Rectangle retanguloAzul = new Rectangle(40, 20);
+		Rectangle retanguloVerde = new Rectangle(40, 20);
+		Rectangle retanguloVermelho = new Rectangle(40, 20);
+
+		retanguloAzul.setFill(Color.BLUE);
+		retanguloVerde.setFill(Color.GREEN);
+		retanguloVermelho.setFill(Color.RED);
+
+		// 6
+		caixaVertical.getChildren().addAll(retanguloAzul, retanguloVerde, retanguloVermelho);
+		stage.setScene(new Scene(caixaVertical, 230, 250));
+		stage.show();
+		stage.setTitle("Testando VBox");
+	}
+
+}
 ``` 
 
 1. Criando nossa VBox. Não estamos enviando nada no construtor, mas é possível informar o espaçamento entre os componentes diretamente no construtor;
@@ -71,7 +95,7 @@ caixaVertical.getChildren().addAll(retanguloAzul, retanguloVerde, retanguloVerme
 
 O resultado está abaixo. Lembre-se de sempre fuçar bastante as classes, essa é a melhor forma de aprender e se diverter :)
 
-
+IMG VBOX
 
 #### HBox
 Não iremos entrar em detalhes dessa classe por que ela trabalha exatamente igual a VBox, com exceção que ela alinha os componentes horizontalmente. Abaixo temos uma imagem de como o código acima se comportaria simplesmente trocar a "instanciação" de VBox para HBox.
@@ -81,40 +105,71 @@ Não iremos entrar em detalhes dessa classe por que ela trabalha exatamente igua
 Um comportamento não muito comum, mas que pode ser útil em diversas aplicações, é o trazido pela classe **StackPane**. Nela os componentes são empilhados uns nos outros, ou seja, quem entrou primeiro fica embaixo do segundo e assim por diante. O exemplo de código abaixo mostra isso muito claramente. Perceba que não iremos explicar o código pois ele é semelhante ao mostrado anteriormente, a exceção está no resultado visual. Estamos desenhando uma bandeira do Brasil (ou tentando), para isso criamos um retângulo, um losango um círculo e, o mais díficil, um arco. Usamos as formas geométricas do JavaFX para fazer isso e no fim colocamos em um gerenciador do tipo StackPane, veja que ele empilha as imagens de forma que por final temos algo que é quase uma bandeira do Brasil... Quase...
 
 ```java
-StackPane painelEmpilhador = new StackPane();
-Rectangle retangulo = new Rectangle(220, 120);
-retangulo.setFill(Color.GREEN);
+package javafxpratico;
 
-Polygon losango = new Polygon();
-losango.getPoints().addAll(new Double[]{
-     50.0, 50.0,
-     150.0, 0.0,
-     250.0, 50.0,
-     150.0, 100.0,
-     50.0, 50.0 });
-losango.setFill(Color.YELLOW);
-Path arco = new Path();
-MoveTo moveTo = new MoveTo();
-moveTo.setX(0.0);
-moveTo.setY(0.0);
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.ArcTo;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.MoveTo;
+import javafx.scene.shape.Path;
+import javafx.scene.shape.Polygon;
+import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 
-ArcTo arcTo = new ArcTo();
-arcTo.setX(55.0);
-arcTo.setY(0.0);
-arcTo.setRadiusX(50.0);
-arcTo.setRadiusY(50.0);
+public class PraticaStackPane extends Application {
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
 
-arco.getElements().add(moveTo);
-arco.getElements().add(arcTo);
-arco.setStroke(Color.WHITE);
+	@Override
+	public void start(Stage palco) throws Exception {
+		StackPane painelEmpilhador = new StackPane();
+		Rectangle retangulo = new Rectangle(220, 120);
+		retangulo.setFill(Color.GREEN);
 
-arco.setRotate(180);
-arco.setStrokeWidth(5);
+		Polygon losango = new Polygon();
+		losango.getPoints().addAll(new Double[]{
+		     50.0, 50.0,
+		     150.0, 0.0,
+		     250.0, 50.0,
+		     150.0, 100.0,
+		     50.0, 50.0 });
+		losango.setFill(Color.YELLOW);
+		Path arco = new Path();
+		MoveTo moveTo = new MoveTo();
+		moveTo.setX(0.0);
+		moveTo.setY(0.0);
 
-Circle circulo = new Circle(30, Color.BLUE);
-  
-painelEmpilhador.getChildren().addAll(retangulo, losango, circulo, arco);
+		ArcTo arcTo = new ArcTo();
+		arcTo.setX(55.0);
+		arcTo.setY(0.0);
+		arcTo.setRadiusX(50.0);
+		arcTo.setRadiusY(50.0);
+
+		arco.getElements().add(moveTo);
+		arco.getElements().add(arcTo);
+		arco.setStroke(Color.WHITE);
+
+		arco.setRotate(180);
+		arco.setStrokeWidth(5);
+
+		Circle circulo = new Circle(30, Color.BLUE);
+		  
+		painelEmpilhador.getChildren().addAll(retangulo, losango, circulo, arco);
+		
+		Scene cena = new Scene(painelEmpilhador, 250, 100); 
+		palco.setTitle("Testando StackPane"); 
+		palco.setScene(cena); 
+		palco.show(); 
+	}
+
+}
 ````
 
 Mais uma vez note que a ordem que adicionamos os componentes é muito importante. Veja o resultado:
 
+IMG BANDEIRA DO BRASIL
