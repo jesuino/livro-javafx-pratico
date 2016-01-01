@@ -2,6 +2,7 @@
 
 * [Introdução](README.md)
 * [JavaFX Prático](javafx_pratico.md)
+   * Gerenciando Layout: BorderPane, FlowPane e o GridPane
    * [Um "Olá Mundo" com JavaFX](artigos/um_ola_mundo_com_javafx.md)
    * [Mostrando Imagens e Figuras Geométricas](artigos/mostrando_imagens_e_figuras_geometricas.md)
    * [Tocando Áudio](artigos/tocando_audio.md)
