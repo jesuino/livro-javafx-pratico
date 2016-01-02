@@ -1,4 +1,4 @@
-# Tratamento de eventos simples e o botão
+# Controles de interface: Tratamento de eventos e o botão
 
 Vamos continuar falando de controles de interface e esse capítulo será dedicado a somente um componente: o Botão. O motivo disso é que para falar de botão, devemos falar de tratamento de evento, logo, precisaremos focar nisso, pois esse conhecimento é muito utilizado em qualquer aplicação JavaFX.
 
