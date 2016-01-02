@@ -1,11 +1,14 @@
 # Gerenciando Layout: BorderPane, FlowPane e o GridPane
 
-Nesse capítulo vamos apresentar o BorderPane, FlowPane e o GridPane. A arquitetura deles é a mesma, se você quiser saber mais sugiro que veja o primeiro artigo da série. 
+Nesse capítulo vamos apresentar o BorderPane, FlowPane e o GridPane. A arquitetura deles é a mesma, se você quiser saber mais sugiro que releia o capítulo anterior. 
 
-BorderPane 
+### BorderPane 
 
-Uma das heranças do bom e velho Swing é o BorderPane. A idéia é bem simples: você coloca os componentes em regiões do painél. Essas regiões são referenciadas como: norte, sul, leste, oeste e centro.
+Uma das heranças do bom e velho Swing é o **BorderPane**. A idéia é bem simples: você coloca os componentes em regiões do painel. Essas regiões são referenciadas como: norte, sul, leste, oeste e centro.
+
 Não há nenhum segredo no uso dele, mas há um pequena diferença que é termos que informar na hora de adicionar os componentes a qual região o mesmo pertence. Vamos ao exemplo de código e em seguida a explicação. 
+
+```java
 BorderPane borderPane = new BorderPane();
 Label lblTop, lblEsquerda, lblBaixo, lblDireita, lblCentro;
 // 1
@@ -16,9 +19,9 @@ borderPane.setRight(lblDireita = new Label("Direita"));
 borderPane.setCenter(lblCentro = new Label("Centro"));
 // 2
 BorderPane.setAlignment(lblTop, Pos.CENTER);
-
-Ao contrário dos layouts apresentados no último post, o BorderPane não utiliza os métodos add, set e remove que falamos no nosso último post, mas sim métodos correspondentes à região da tela. Os métodos setTop,setLeft,setBottom,setRight e setCenter, são respectivamente para informar os nós do topo, esquerda, baixo, direita e centro. Esses nós são agrupados dentro do espaço do BorderPane
-Nessa parte mostramos como alinhamos um nó. Veja que usamos um método estático para isso, o que já gerou muitas críticas. Cabe a você tentar outros valores de Pos na chamada desse método!
+```
+1. Ao contrário dos layouts apresentados no último post, o BorderPane não utiliza os métodos add, set e remove que falamos no nosso último post, mas sim métodos correspondentes à região da tela. Os métodos setTop,setLeft,setBottom,setRight e setCenter, são respectivamente para informar os nós do topo, esquerda, baixo, direita e centro. Esses nós são agrupados dentro do espaço do BorderPane
+2. Nessa parte mostramos como alinhamos um nó. Veja que usamos um método estático para isso, o que já gerou muitas críticas. Cabe a você tentar outros valores de Pos na chamada desse método!
 
 Abaixo o resultado desse código:
 
