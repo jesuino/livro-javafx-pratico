@@ -1,4 +1,4 @@
-# Rótulos, campos de texto, separadores e controles deslizantes
+# Controles de interface: Rótulos, campos de texto e outros
 
 Fazendo jus ao seu principal objetivo, JavaFX oferece muitos controles de interface entre simples rótulos para mostrar texto até complexas tabelas com milhares de registros. Nesse artigo vamos mostrar os controles mais básicos de interface que JavaFX oferece.
 
