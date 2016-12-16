@@ -22,3 +22,4 @@ Mas o que você pode fazer com JavaFX?
 
 
 
+As aplicações em JavaFX rodam no computador localmente, não em um navegador WEB. No entanto, há projetos maduros da comunidade que permitem portar o seu código para celulares ou para rodar dentro de navegadores.
