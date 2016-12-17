@@ -71,7 +71,7 @@ for (int i = 0; i < 10; i++) {
 
 1. Criamos o nosso **FlowPane**. Falei que podemos a direção do fluxo. Isso pode ser feito direto no construtor usando a classe **Orientation**;
 2. Aqui setamos o alinhamento: centro, centro para a direita, centro // para esquerda, topo para esquerda, etc. Brinque com outros valores; :\)
-3. Adicionando um componente ao nosso Painel. Isso é feito da forma simples já mostrada no nosso post anterior.
+3. Adicionando um componente ao nosso Painel. Isso é feito da forma simples já mostrada em seções anteriores anterior.
 
 Bem, aqui está o resultado do código acima:
 
