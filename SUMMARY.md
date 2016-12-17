@@ -12,7 +12,7 @@
   * [Controles de Interface: ComboBox e ChoiceBox](artigos/combobox_e_choicebox.md)
   * [Gerenciando Layout: HBox, VBox e StackPane](artigos/gerenciando_layout_hbox_vbox_e_stackpane.md)
   * [Gerenciando Layout: BorderPane, FlowPane e o GridPane](artigos/gerenciando_layout_borderpane_flowpane_e_o_gridpa.md)
-  * Transições
+  * [Transições](/artigos/transições.md)
 
 
 
