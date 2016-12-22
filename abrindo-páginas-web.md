@@ -56,10 +56,7 @@ Nessa aplicação temos uma lista de URLs no lado esquerdo e quando o usuário s
 
 ![](/imagens/telas/appWebJavaFX.png)
 
-  
-
-
- O funcionamento é simples: a ListView e o WebView ficam em um gerenciador de layout do tipo HBox. Quando o usuário seleciona um elemento na lista, pegamos a URL selecionada e carregamos na WebEngine usando o WebView. Quando a WebEngine está carregando a página, nós desabilitamos a lista. Fácil, não? Vejam o código inteiro:
+O funcionamento é simples: a ListView e o WebView ficam em um gerenciador de layout do tipo HBox. Quando o usuário seleciona um elemento na lista, pegamos a URL selecionada e carregamos na WebEngine usando o WebView. Quando a WebEngine está carregando a página, nós desabilitamos a lista. Fácil, não? Vejam o código inteiro:
 
 ```java
 import javafx.application.Application;
@@ -75,43 +72,43 @@ import java.util.stream.Stream;
  * @author william
  */
 public class NavegaSites extends Application {
-	
-	public static void main(String[] args) {
-		launch();
-	}
-    
-	final String[] sites = {
-		"aprendendo-javaee.blogspot.com",
-		"aprendendo-javafx.blogspot.com",
-		"aprendendo-javase.blogspot.com",
-		"aprendendo-jboss.blogspot.com",
-		"jugvale.com",
-		"javafx.com",
-		"java.com",
-		"google.com"
-	};
+
+    public static void main(String[] args) {
+        launch();
+    }
+
+    final String[] sites = {
+        "aprendendo-javaee.blogspot.com",
+        "aprendendo-javafx.blogspot.com",
+        "aprendendo-javase.blogspot.com",
+        "aprendendo-jboss.blogspot.com",
+        "jugvale.com",
+        "javafx.com",
+        "java.com",
+        "google.com"
+    };
 
     @Override
     public void start(Stage s) {
-    	// criando uma lista visual de Strings, um webView e uma caixinha pra colocar as coisas
-	ListView<String> listaSites = new ListView<>();
-	WebView webView = new WebView();
+        // criando uma lista visual de Strings, um webView e uma caixinha pra colocar as coisas
+    ListView<String> listaSites = new ListView<>();
+    WebView webView = new WebView();
         HBox raiz = new HBox(20);
 
-	// Para cada site no array adicionamos na lista visual
-	Stream.of(sites).forEach(listaSites.getItems()::add);
-	
-	// Quando o usuário seleciona um item, carregamos a página
-	listaSites.getSelectionModel().selectedItemProperty().addListener(
-	    (obs, o, n) -> {
-	        if(n != null) webView.getEngine().load("http://www." + n);
-	});
-	
-	// a lista não permite seleção de página quando uma página está sendo carregada
-	listaSites.disableProperty().bind(webView.getEngine().getLoadWorker().runningProperty());
+    // Para cada site no array adicionamos na lista visual
+    Stream.of(sites).forEach(listaSites.getItems()::add);
 
-	// formalidades...
-	raiz.getChildren().addAll(listaSites, webView);
+    // Quando o usuário seleciona um item, carregamos a página
+    listaSites.getSelectionModel().selectedItemProperty().addListener(
+        (obs, o, n) -> {
+            if(n != null) webView.getEngine().load("http://www." + n);
+    });
+
+    // a lista não permite seleção de página quando uma página está sendo carregada
+    listaSites.disableProperty().bind(webView.getEngine().getLoadWorker().runningProperty());
+
+    // formalidades...
+    raiz.getChildren().addAll(listaSites, webView);
         s.setScene(new Scene(raiz));
         s.show();
     }    
