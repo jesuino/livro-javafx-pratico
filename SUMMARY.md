@@ -15,4 +15,5 @@
     * [Transições](artigos/transições.md)
     * [Desenhando com Canvas](desenhando-com-canvas.md)
     * [Gráficos](gráficos.md)
+    * [Abrindo páginas Web](abrindo-páginas-web.md)
 
