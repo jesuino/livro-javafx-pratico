@@ -111,14 +111,13 @@ public class ControleAplicacao {
   lblMensagem.setText("Olá, " + txtNome.getText() + ", bem vindo!");
  }
 }
-
 ```
 
-###  Executando sua aplicação com FXML
+### Executando sua aplicação com FXML
 
- Nesse momento, nossa aplicação está funcionando. Só precisamos carregar o FXML e isso é feito através da classe [FXMLLoader](http://docs.oracle.com/javafx/2/api/javafx/fxml/FXMLLoader.html), que lê o nosso arquivo .fxml e retorna um objeto do tipo [Parent](http://docs.oracle.com/javafx/2/api/javafx/scene/Parent.html). Com ele é possível configurar a raiz da cena da aplicação, veja:
+Nesse momento, nossa aplicação está funcionando. Só precisamos carregar o FXML e isso é feito através da classe [FXMLLoader](http://docs.oracle.com/javafx/2/api/javafx/fxml/FXMLLoader.html), que lê o nosso arquivo .fxml e retorna um objeto do tipo [Parent](http://docs.oracle.com/javafx/2/api/javafx/scene/Parent.html). Com ele é possível configurar a raiz da cena da aplicação, veja:
 
-```
+```java
 public class DigaOlaComFXML extends Application {
 
  public static void main(String[] args) {
@@ -137,9 +136,11 @@ public class DigaOlaComFXML extends Application {
 }
 ```
 
-###  Criando interfaces visualmente com o Scene Builder
+### Criando interfaces visualmente com o Scene Builder
 
- Falamos que com Java o projeto poderia ficar muito complexo, mas você pode perceber que o XML não é lá aquelas facilidades... Felizmente temos uma ferramenta onde podemos arrastar e soltar componentes para desenhar nossa tela. Em seguida, exportamos um arquivo .fxml para uso em nossa aplicação JavaFX! Veja uma imagem da ferramenta.
+Falamos que com Java o projeto poderia ficar muito complexo, mas você pode perceber que o XML não é lá aquelas facilidades... Felizmente temos uma ferramenta onde podemos arrastar e soltar componentes para desenhar nossa tela. Em seguida, exportamos um arquivo .fxml para uso em nossa aplicação JavaFX! Veja uma imagem da ferramenta.
 
+![](/imagens/telas/scene-builder.png)
 
+Essa ótima ferramenta é mantida pela empresa Gluon e pode ser baixada no seguinte endereço: http://gluonhq.com/labs/scene-builder
 
