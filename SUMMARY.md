@@ -14,4 +14,5 @@
     * [Gerenciando Layout: BorderPane, FlowPane e o GridPane](artigos/gerenciando_layout_borderpane_flowpane_e_o_gridpa.md)
     * [Transições](artigos/transições.md)
     * [Desenhando com Canvas](desenhando-com-canvas.md)
+    * [Gráficos](gráficos.md)
 
