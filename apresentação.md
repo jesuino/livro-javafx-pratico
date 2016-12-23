@@ -1,6 +1,6 @@
 # JavaFX Prático
 
-Um livro rápido, direto, sem muita enrolação. Objetivo é introduzir as classes mais básicas da plataforma JavaFX com evolução natural dos conceitos sem que haja buracos no aprendizado dos componentes básicos da plataforma.
+Um livro rápido, direto, sem muita enrolação. Objetivo é introduzir as classes mais básicas da plataforma JavaFX com evolução natural dos conceitos sem que haja buracos no aprendizado dos componentes básicos da plataforma. É necessário somente o conhecimento básico de Java e o uso de uma IDE que suporte Maven.
 
 Notem que esse livro é baseado no blog [Aprendendo JavaFX](http://aprendendo-javafx.blogspot.com.br/), mas revisado, editado e formatado para ficar no formato de um livro!
 
@@ -25,5 +25,12 @@ Há exemplos de código em todos os capítulos e estão estão em um projeto Mav
 
 Em um anexo você encontra **javafx-pratico.zip **\_e nesse arquivo há todo o código organizado e testado. Cabe a você explorar.
 
-**Autor:** _William Antônio Siqueira &lt;william.a.siqueira@gmail.com&gt;_
+Você pode abrir o eclipe e importar o projeto usando os seguintes passos:
+
+* _Deszipe_ o arquivo  **javafx-pratico.zip **em algum lugar no seu computador;
+* No Eclipse você deve usar o menu _**File -&gt; Import -&gt; Existing Maven Projects**_
+* Então você aponta para o diretório onde está o arquivo pom.xml, que você _deszipou;_
+* É só um projeto com todo o código mencionado nesse livro. Você pode rodar as classes que tiverem um método _main _usando _**Run As -&gt; Java Application**_
+
+
 
