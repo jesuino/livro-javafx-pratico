@@ -25,3 +25,15 @@ Há exemplos de código em todos os capítulos e estão estão em um projeto Mav
 
 Em um anexo você encontra **javafx-pratico.zip **\_e nesse arquivo há todo o código organizado e testado. Cabe a você explorar.
 
+
+
+
+
+
+
+
+
+
+
+**Autor:** _William Antônio Siqueira &lt;william.a.siqueira@gmail.com&gt;_
+
