@@ -16,8 +16,8 @@
     * [Desenhando com Canvas](desenhando-com-canvas.md)
     * [Gráficos](gráficos.md)
     * [Abrindo páginas Web](abrindo-páginas-web.md)
+    * [Tabelas com JavaFX](tabelas-com-javafx.md)
     * [Mudando o estilo com CSS](mudando-o-estilo-com-css.md)
     * [Usando FXML](usando-fxml.md)
-    * [Tabelas com JavaFX](tabelas-com-javafx.md)
     * [Projeto: Um simples CRUD](projeto-final-um-simples-crud.md)
 
