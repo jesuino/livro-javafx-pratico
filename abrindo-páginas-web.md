@@ -1,6 +1,6 @@
 ### Abrindo e renderizando páginas WEB em uma aplicação JavaFX
 
-Nessa postagem vamos falar sobre como carregar páginas WEB dentro de sua aplicação JavaFX. Mais uma vez: essa é uma tarefa muito fácil em JavaFX!
+Nesse capítulo vamos falar sobre como carregar páginas WEB dentro de sua aplicação JavaFX. Mais uma vez: essa é uma tarefa muito fácil em JavaFX!
 
 ### Um conto de duas classes: WebView e WebEngine
 

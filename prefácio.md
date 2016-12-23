@@ -10,19 +10,3 @@ Mas voltando a revistinha Divirta-se com a Eletrônica. Nessa revista não tính
 
 Ao ler esse livro eu espero que: 1\) Você se divirta; 2\) Aprenda algo que vai lhe ser útil; 3\) Possa compartilhar as coisas que aprendeu aqui com outras pessoas .
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-_**                                                                                                                                                                                                    - William Antônio Siqueira**_
-

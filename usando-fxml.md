@@ -1,6 +1,6 @@
 ### Introdução ao FXML: Criando interfaces em JavaFX usando XML e o Scene Builder
 
-Até agora nossas postagem utilizaram código Java na criação das [interfaces gráficas\(GUI\)](http://pt.wikipedia.org/wiki/Interface_gr%C3%A1fica_do_utilizador). O uso de Java  pode parecer atrativo a primeira vista, no entanto, o código pode se tornar complexo e de díficil manutenção, mas não é só em Java que podemos criar as telas.
+Até agora utilizamos código Java na criação das [interfaces gráficas\(GUI\)](http://pt.wikipedia.org/wiki/Interface_gr%C3%A1fica_do_utilizador). O uso de Java  pode parecer atrativo a primeira vista, no entanto, o código pode se tornar complexo e de díficil manutenção, mas não é só em Java que podemos criar as telas.
 
 O uso de [XML](http://www.w3schools.com/xml/) é possível no JavaFX para que possamos criar a GUI de uma aplicação e então referenciar o mesmo no código Java. Os XMLs que contém componentes JavaFX são chamados de FXML.
 
@@ -142,5 +142,5 @@ Falamos que com Java o projeto poderia ficar muito complexo, mas você pode perc
 
 ![](/imagens/telas/scene-builder.png)
 
-Essa ótima ferramenta é mantida pela empresa Gluon e pode ser baixada no seguinte endereço: http://gluonhq.com/labs/scene-builder
+Essa ótima ferramenta é mantida pela empresa Gluon e pode ser baixada no seguinte endereço: [http://gluonhq.com/labs/scene-builder](http://gluonhq.com/labs/scene-builder)
 

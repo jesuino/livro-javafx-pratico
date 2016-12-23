@@ -11,7 +11,7 @@ Utilizando JavaFX 8 e Eclipse. O download pode ser realizado nos seguintes links
 * [Java JDK 8](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Eclipse IDE for Java Developers\(para esse livro foi usada a versão "Mars"\)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/mars1)
 
-## Como ler esse livro livro
+## Como ler esse livro
 
 O livro não está organizando em capítulos. Pelo contrário, vamos em uma ordem linear, começando com conceitos básicos, até aplicações um pouco mais complexas.
 
