@@ -48,7 +48,7 @@ Como muitos já devem ter imaginado, temos uma classe comum para todas as transi
 
 Vamos agora explorar uma pequena aplicação que irá mostrar as funcionalidades das principais transições. Você pode encontrar o código da classe no arquivo AprendendoTransicoes.java. Veja nossa aplicação de exemplo:
 
-![](/assets/appTransicoes.png)
+![](/imagens/telas/appTransicoes.png)
 
 Para criar as transições, usamos uma classe chamada **FabricaTransicao.**.  Nessa classe há um método chamado _fazerTransicao_ que, dado um [enum](http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html), duração e um nó, sempre cria uma nova transição:
 
