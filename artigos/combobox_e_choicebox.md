@@ -5,7 +5,7 @@ Nesse capítulo também sobre controles, vamos falar das caixas de combinação,
 ### Muitas opções, uma possível escolha
 
 Os dois controles que vamos apresentar hoje funcionam de maneira muito semelhante, a maior diferença está na forma visual que elas são apresentadas dentro da sua aplicação. Ambas permitem que você faça a escolha de uma só opção entre diversas outras. no entanto, há uma pequena diferença visual entre elas e o **ComboBox** permite que você fabrique as células que serão mostradas. Criar fábrica de células é um assunto que facilmente ocuparia um capítulo inteiro, vamos deixar isso para outra hora.
-Para tratar dos dados individualmente da parte visual, usamos em ambas classes o conceito de **SelectionModel**, onde abstraimos a parte de seleção de dados. Temos duas abstrações: **MultipleSelectionModel**(permite selecionar vários itens ao mesmo tempo) e **SingleSelectionModel**(permite selecionar um único item ao mesmo tempo.
+Para tratar dos dados individualmente da parte visual, usamos em ambas classes o conceito de **SelectionModel**, onde abstraimos a parte de seleção de dados. Temos duas abstrações: **MultipleSelectionModel** (permite selecionar vários itens ao mesmo tempo) e **SingleSelectionModel** (permite selecionar um único item ao mesmo tempo.
 Hoje também vamos falar de um conceito novo e específico do JavaFX, então vamos nos limitar a mostrar o ComboBox e uma aplicação super simples, no entanto, o leitor deve pode acessar a documentação *JavaDoc* do ChoiceBox e criar a mesma aplicação usando ele. Enfim, vamos ao código!
 
 ### Selecione a cor

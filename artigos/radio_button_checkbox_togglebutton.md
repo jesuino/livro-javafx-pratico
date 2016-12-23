@@ -10,7 +10,7 @@ O uso desse tipo de botão é feito em diversos casos onde você tem escolhar be
 
 ### Três estados, um controle
 
-O segundo controle de interface que vamos mostrar hoje é simples e bastante utilizado em formulários para pedido de informações de usuários quando temos uma questão direta (exemplo: "Você Fuma?"). Estamos falando da caixa de checagem, **CheckBox**, que na verdade tem três estados: selecionado, não selecionado e indeterminado(você pode escolher se quer habilitar esse estado ou não). 
+O segundo controle de interface que vamos mostrar hoje é simples e bastante utilizado em formulários para pedido de informações de usuários quando temos uma questão direta (exemplo: "Você Fuma?"). Estamos falando da caixa de checagem, **CheckBox**, que na verdade tem três estados: selecionado, não selecionado e indeterminado (você pode escolher se quer habilitar esse estado ou não). 
 
 Pode parecer estranho, mas um problema que podemos ter é pedir a entrada de um usuário e o mesmo sequer ligar para esse campo, daí ele larga o campo em branco, logo, como você vai fazer para saber se ele não respondeu ou não marcou com o objetivo de responder de forma negativa à pergunta? 
 

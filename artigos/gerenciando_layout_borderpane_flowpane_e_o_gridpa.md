@@ -30,7 +30,7 @@ Abaixo o resultado desse código:
 
 ### GridPane
 
-O GridPane, ou painel de grade, permite adicionar componentes em posições específicas semelhantes á uma grade de nós. Para entender melhor imagine a área do **GridPane** como um tabuleiro de batalha naval. Nesse tipo de jogo, temos os campos definidos por divisões, como por exemplo A1, B5, etc. O GridPane atua de forma semelhante, posicionando componentes nessa grade. No entanto, especificamos a posição com dois números invés de uma letra e um número, exemplo: 1-1, 5-2, etc. Esse gerenciador de leiaute também não utiliza os métodos add, set e remove. Na verdade, no momento de adicionar o componente já especificamos qual a "gradezinha" ele vai ocupar. Vamos a um exemplo de código para esclarecer.
+O GridPane, ou painel de grade, permite adicionar componentes em posições específicas semelhantes á uma grade de nós. Para entender melhor imagine a área do **GridPane** como um tabuleiro de batalha naval. Nesse tipo de jogo, temos os campos definidos por divisões, como por exemplo A1, B5, etc. O GridPane atua de forma semelhante, posicionando componentes nessa grade. No entanto, especificamos a posição com dois números invés de uma letra e um número, exemplo: 1-1, 5-2, etc. Esse gerenciador de layout também não utiliza os métodos add, set e remove. Na verdade, no momento de adicionar o componente já especificamos qual a "gradezinha" ele vai ocupar. Vamos a um exemplo de código para esclarecer.
 
 ```java
 GridPane gridPane = new GridPane();
@@ -56,7 +56,7 @@ gridPane.setTranslateY(30);
 
 ### FlowPane
 
-"Painel de Fluxo" é um significado ao pé da letra para **FlowPane**. Como o nome diz, é um painel que segue o fluxo da coisa, ou seja, você vai adicionando componentes e ele vai colocando de acordo com o fluxo. O fluxo pode ser na vertical ou horizontal e os componentes podem ser posicionados de forma centralizada, centralizada na vertical, tudo ao topo, etc. Parece difícil, mas é um dos paineis mais simples. Por exemplo, digamos que você utilize um desses do tipo horizontal e adicione 4 componentes. O 4 não caberia na mesma linha, então o FlowPane coloca ele na "linha abaixo", mesmo sobrando espaço na terceira linha. O mesmo acontece para o FlowPane na vertical, mas aí ele colocaria os componentes na próximo coluna, seguindo o fluxo. Lembrando que isso é dinâmico, se vocề redimensiona o pai, ele realoca os componentes sempre seguindo o fluxo. Mas chega de papo e vamos ao código.
+"Painel de Fluxo" é um significado ao pé da letra para **FlowPane**. Como o nome diz, é um painel que segue o fluxo da coisa, ou seja, você vai adicionando componentes e ele vai colocando de acordo com o fluxo. O fluxo pode ser na vertical ou horizontal e os componentes podem ser posicionados de forma centralizada, centralizada na vertical, tudo ao topo, etc. Parece difícil, mas é um dos paineis mais simples. Por exemplo, digamos que você utilize um desses do tipo horizontal e adicione 4 componentes. O 4 não caberia na mesma linha, então o FlowPane coloca ele na "linha abaixo", mesmo sobrando espaço na terceira linha. O mesmo acontece para o FlowPane na vertical, mas aí ele colocaria os componentes na próximo coluna, seguindo o fluxo. Lembrando que isso é dinâmico, se você redimensiona o pai, ele realoca os componentes sempre seguindo o fluxo. Mas chega de papo e vamos ao código.
 
 ```java
 // 1
@@ -70,7 +70,7 @@ for (int i = 0; i < 10; i++) {
 ```
 
 1. Criamos o nosso **FlowPane**. Falei que podemos a direção do fluxo. Isso pode ser feito direto no construtor usando a classe **Orientation**;
-2. Aqui setamos o alinhamento: centro, centro para a direita, centro // para esquerda, topo para esquerda, etc. Brinque com outros valores; :\)
+2. Aqui setamos o alinhamento: centro, centro para a direita, centro para esquerda, topo para esquerda, etc. Brinque com outros valores; :\)
 3. Adicionando um componente ao nosso Painel. Isso é feito da forma simples já mostrada em seções anteriores anterior.
 
 Bem, aqui está o resultado do código acima:

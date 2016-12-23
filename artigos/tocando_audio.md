@@ -38,7 +38,7 @@ public class TocandoAudio extends Application {
 }
 ```
 1. Aqui carregamos o clipe de áudio e informamos a URL do audio a ser tocado;
-2/ O áudio irá começar a tocar nessa linha. Semelhante ao vídeo, temos vários outros métodos que poderíamos utilizar
-3. Não é relacionado ao áudio, mas essa linha adiciona um simples texto informativo, pois não temos nada visual quanto tocamos áudio
+2. O áudio irá começar a tocar nessa linha. Semelhante ao vídeo, temos vários outros métodos que poderíamos utilizar;
+3. Não é relacionado ao áudio, mas essa linha adiciona um simples texto informativo, pois não temos nada visual quanto tocamos áudio.
 
 A aplicação pode demorar um pouquinho para rodar, pois o áudio está na internet. Você pode incrementar essa aplicação quando aprender sobre botões e outros controles de interface que falaremos em breve.

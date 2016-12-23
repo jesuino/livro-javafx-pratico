@@ -50,13 +50,13 @@ Essa é uma das aplicações mais básicas que você pode fazer com JavaFX! Voc�
 ![](../imagens/telas/ola_mundo_javafx.png)
 
 
-Ótimo! Sua primeira aplicação. Vocë deve ter notado que o código acima está com comentários numéricos. Isso foi proposital, pois aqui vai a explicaÇão desse código aí! Preste bastante atenção pois esse mesmo cõdigo é usado em todas as aplicações JavaFX!
+Ótimo! Sua primeira aplicação. Você deve ter notado que o código acima está com comentários numéricos. Isso foi proposital, pois aqui vai a explicação desse código aí! Preste bastante atenção pois esse mesmo código é usado em todas as aplicações JavaFX!
 
 
 1. Perceba que a classe principal herda de **javafx.application.Application**. **TODA** classe principal de JavaFX deve herdar de Application e implementar o método start;
 2. No método *main* chamamos o método *lunch* para começar a nossa aplicação. Aqui não vai código JavaFX, o código vai no método start (notem que no JavaFX 8 isso é mais necessário, abaixo mais detalhes);
 3. A implementação do método *start*, herdado da classe Application. O atributo recebido é do tipo **javafx.stage.Stage**. Sendo direto, podemos ver o Stage (palco) como o frame, a janela da nossa aplicação, mas na verdade ele não pode ser representado sim se pensarmos nos diversos dispositivos que podem rodar(em um futuro próximo) JavaFX: Celulares, televisores, "tablets", etc;
-4. Nesse ponto nós criamos um elemento chamado "pai", pois permite adicionarmos outras coisas dentro dele. No nosso caso, o **javafx.scene.layout.StackPane** permite adicionar vários elementos os quais tem seu leiaute de pilha, ou seja, eles serão empilhados um sobre o outro. No futuro falaremos mais sobre isso, mas lembre-se que tudo no JavaFX é um nó, ou seja, herda da classe **Node**;
+4. Nesse ponto nós criamos um elemento chamado "pai", pois permite adicionarmos outras coisas dentro dele. No nosso caso, o **javafx.scene.layout.StackPane** permite adicionar vários elementos os quais tem seu layout de pilha, ou seja, eles serão empilhados um sobre o outro. No futuro falaremos mais sobre isso, mas lembre-se que tudo no JavaFX é um nó, ou seja, herda da classe **Node**;
 5. Não há nada de mais aqui, simplesmente criamos um objeto do tipo **javafx.scene.control.Label**, que é um controle de interface para mostrar texto. Ponto;
 6. Aqui informamos o texto que o Label irá mostrar. Note que isso poderia ter sido feito pelo construtor, na criação do Label;
 7. Como o StackPane é um elemento pai, ele também tem elementos filhos. Nessa linha de código, recuperamos os filhos dele(*getChildren()*) e adicionamos nosso Label(*add(Node)*), fazendo que o Label seja um filho dele;

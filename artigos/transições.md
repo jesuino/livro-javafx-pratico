@@ -10,13 +10,13 @@ Após configurar os parâmetros corretamente, você pode decidir quando a transi
 
 As classes de transição oferecidades no JavaFX ficam no pacote [javafx.animation](http://docs.oracle.com/javafx/2/api/javafx/animation/package-frame.html) e as seguintes transições estão disponíveis para uso:
 
-* [FadeTransition](http://docs.oracle.com/javafx/2/api/javafx/animation/FadeTransition.html): Muda a opacidade\(tranparência\) de um nó. O FadeTransition permite variar essa opacidade em um dado tempo. Por exemplo, você pode configurar uma transição para em 1 segundo variar a opacidade de um nó\(um botão, uma imagem, uma figura geométrica, etc\) de 0 até 1 e isso fará com que o mesmo passe de invisível até ser completamente visível no tempo de 1 segundo;
+* [FadeTransition](http://docs.oracle.com/javafx/2/api/javafx/animation/FadeTransition.html): Muda a opacidade (transparência) de um nó. O FadeTransition permite variar essa opacidade em um dado tempo. Por exemplo, você pode configurar uma transição para em 1 segundo variar a opacidade de um nó (um botão, uma imagem, uma figura geométrica, etc) de 0 até 1 e isso fará com que o mesmo passe de invisível até ser completamente visível no tempo de 1 segundo;
 * [FillTransition](http://docs.oracle.com/javafx/2/api/javafx/animation/FillTransition.html): Com a FillTransition nós podemos mudar a cor de preenchimento de um objetvo. Se um objeto tem o preenchimento com a cor azul e você usa a transição para mudar a cor de azul para rosa em um segundo, isso significa que a cor de preenchimento do mesmo irá iniciar totalmente azul e no espaço de tempo de 1 segundo irá se tornar completamente rosa, dando um efeito bastante interessante;
 * [RotateTransition](http://docs.oracle.com/javafx/2/api/javafx/animation/RotateTransition.html): Uma das propriedades mais comuns em um nó é a **rotate** \(rotação\). A RotateTransition mudará a rotação de um objeto de acordo com o tempo configurado. Por exemplo, você pode rotacionar um objeto de 0º até 90º em 2 segundos e após iniciar essa tranisção, ele irá ter a rotação modificada gradualmente até que o tempo termine;
 * [ScaleTransition](http://docs.oracle.com/javafx/2/api/javafx/animation/ScaleTransition.html): A ScaleTransition server para você modificar a escala de um objeto, seja a altura ou a largura. Em outras palavras, você pode fazer a escala de um objeto ser modificada de X para X^2  em um dado intervalo de tempo;
 * [TranslateTransition](http://docs.oracle.com/javafx/2/api/javafx/animation/TranslateTransition.html): Similarmente ao que foi falado na introdução desse artigo, a TranslateTransition irá modificar a posição X ou Y de um objeto em um dado intervalo de tempo;
 * [StrokeTransition](http://docs.oracle.com/javafx/2/api/javafx/animation/StrokeTransition.html): A StrokeTransition é muito similar à FillTransition, no entanto, nessa transição a modificação não é do preenchimento, mas sim da linha que contorna o mesmo;
-* [PathTransition](http://docs.oracle.com/javafx/2/api/javafx/animation/PathTransition.html): Embora complexa, a PathTransition é muito útil, pois permite que muitas ações sejam tomadas de acordo com o objeto [Path](http://docs.oracle.com/javafx/2/api/javafx/scene/shape/Path.html)passado;
+* [PathTransition](http://docs.oracle.com/javafx/2/api/javafx/animation/PathTransition.html): Embora complexa, a PathTransition é muito útil, pois permite que muitas ações sejam tomadas de acordo com o objeto [Path](http://docs.oracle.com/javafx/2/api/javafx/scene/shape/Path.html) passado;
 
   A API do JavaFX também disponibiliza transições que permitem que várias transições sejam "tocadas" ao mesmo tempo, são elas:
 
@@ -50,7 +50,7 @@ Vamos agora explorar uma pequena aplicação que irá mostrar as funcionalidades
 
 ![](/imagens/telas/appTransicoes.png)
 
-Para criar as transições, usamos uma classe chamada **FabricaTransicao.**.  Nessa classe há um método chamado _fazerTransicao_ que, dado um [enum](http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html), duração e um nó, sempre cria uma nova transição:
+Para criar as transições, usamos uma classe chamada **FabricaTransicao**.  Nessa classe há um método chamado _fazerTransicao_ que, dado um [enum](http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html), duração e um nó, sempre cria uma nova transição:
 
 ```java
 public static class FabricaTransicao {
@@ -115,7 +115,7 @@ public static class FabricaTransicao {
 
 Isso obviamente não é "bonito", mas esse código não utiliza as melhores práticas de codificação, ele é somente para demonstrar as transições. As 5 transições aí criadas mostram como usamos os métodos mais básicos da transição. Primeiramente temos um atributo que é do tipo **Transition**, ou seja, uma classe abstrata, então de acordo com o valor do enum criamos uma transição concreta e atribuimos à [transição abstrata](http://docs.oracle.com/javafx/2/api/javafx/animation/Transition.html).
 
-Note a repetição de uso dos métodos _setNode_ e _setDuration_. Esses métodos estão em quase todas as transições, mas não em todos, por isso eles não puderam ser definidos na [classe abstrata](http://docs.oracle.com/javase/tutorial/java/IandI/abstract.html). já nas seguintes duas linhas em destaque, temos dois métodos que são da classe abstrata\(_setAutoReverse_ e _setCycleCount_\), logo não precisamos repetir a chamada do mesmo para cada transição criada.Esses dois métodos simplesmente irão fazer com que a transição mude o atributo do nó e volte para o valor original. Para isso precisamos ter dois ciclos \(ciclos são quantas vezes a transição será tocada\).
+Note a repetição de uso dos métodos _setNode_ e _setDuration_. Esses métodos estão em quase todas as transições, mas não em todos, por isso eles não puderam ser definidos na [classe abstrata](http://docs.oracle.com/javase/tutorial/java/IandI/abstract.html). já nas seguintes duas linhas em destaque, temos dois métodos que são da classe abstrata (_setAutoReverse_ e _setCycleCount_\), logo não precisamos repetir a chamada do mesmo para cada transição criada.Esses dois métodos simplesmente irão fazer com que a transição mude o atributo do nó e volte para o valor original. Para isso precisamos ter dois ciclos \(ciclos são quantas vezes a transição será tocada\).
 
 Os botões na parte acima da aplicação são do tipo "ToggleButton" e são parte de um grupo. Esse grupo é gerado baseado no seguinte Enum que você pode ver declarado na classe **FabricaTransicao** mostrado acima. O Enum contém as transições que a Fábrica suporta e de acordo com os valores dele, a gente gera os botões. Veja o código abaixo:
 
@@ -138,7 +138,7 @@ private HBox criaPainelSuperior() {
 }
 ```
 
-Perceba que através do método _setUserData_ nós adicionamos a cada botão o valor do enum que esse botão representa e usamos esse valor para fabricar nossa transição.  Quando você clica no botão "Tocar", a "action" do mesmo será usar a fábrica para produzir uma transição de acordo com o botão selecionado, configurar o comportamento dos botões para que os mesmos não fiquem ativos quando a transição estiver tocando\(ou que fiquem ativos só quando a transição estiver tocando\). Veja a ação do botão Tocar:
+Perceba que através do método _setUserData_ nós adicionamos a cada botão o valor do enum que esse botão representa e usamos esse valor para fabricar nossa transição.  Quando você clica no botão "Tocar", a "action" do mesmo será usar a fábrica para produzir uma transição de acordo com o botão selecionado, configurar o comportamento dos botões para que os mesmos não fiquem ativos quando a transição estiver tocando (ou que fiquem ativos só quando a transição estiver tocando). Veja a ação do botão Tocar:
 
 ```java
 btnTocar.setOnAction(e -> acaoTocar(btnParar, btnTocar, btnPausar, btnAjusta));

@@ -1,13 +1,13 @@
 # Gerenciando Layout: HBox, VBox e StackPane
 
-Organizar os componentes que estão em uma aplicação gráfica é sempre um desafio, pois você tem que posicionar e dimensionar cada elemento que adicionar a sua aplicação. Os gerenciadores de leiaute(ou layout, você decide) servem para auxiliar você nessa missão.
+Organizar os componentes que estão em uma aplicação gráfica é sempre um desafio, pois você tem que posicionar e dimensionar cada elemento que adicionar a sua aplicação. Os gerenciadores de layout (ou leiaute, você decide) servem para auxiliar você nessa missão.
 
-O JavaFX traz alguns gerenciadores pronto para auxiliar você. Nesse capítulo vamos começar a falar dessa API, no entanto, vocë deve ter percebido o uso de alguns em capítulos anteriores.
+O JavaFX traz alguns gerenciadores pronto para auxiliar você. Nesse capítulo vamos começar a falar dessa API, no entanto, você deve ter percebido o uso de alguns em capítulos anteriores.
 
-### O que é um gerenciador de leiaute?
+### O que é um gerenciador de layout?
 
 O conceito é bem simples. Quando você vai criar sua aplicação, a "telinha" dela, você tem necessidades comuns de posicionamento e dimensionamento dos componentes. Exemplo: as vezes você quer colocar eles alinhados verticalmente ou horizontalmente, quer empilhar, colocar em uma "grade" e por aí vai. Fazer isso na mão já é difícil e ainda teremos que recriar o código para cada nova aplicação que escrevermos...
-Um gerenciador de leiaute é uma classe que faz esse gerenciamento para você de acordo com uma forma de posicionamento já estabelecida. Em termos práticos, a classe **VBox**, por exemplo, organiza os componentes verticalmente e podemos adicionar nela os componentes de nossa aplicação como os botões, rótulos, tabelas, ou até outros gerenciadores de leiaute. As principais classes do JavaFX que exercem essa função são:
+Um gerenciador de layout é uma classe que faz esse gerenciamento para você de acordo com uma forma de posicionamento já estabelecida. Em termos práticos, a classe **VBox**, por exemplo, organiza os componentes verticalmente e podemos adicionar nela os componentes de nossa aplicação como os botões, rótulos, tabelas, ou até outros gerenciadores de layout. As principais classes do JavaFX que exercem essa função são:
 
 * **VBox:** Alinha os componentes verticalmente;
 * **HBox:** Alinha os componentes horizontamente;
@@ -35,7 +35,7 @@ Há outros métodos. As listas observáveis são poderosas classes do mundo Java
 
 ### Conhecendo na prática
 
-Depois de tanto conceito e uma pequena exploração da API, vamos criar aplicações simples que usam essas classes e dessa forma vamos ver em ação tudo que falamos, tornando mais prazeroso o aprendizado e a exploração da API. Hoje vamos mostrar só três classes: **VBox**, **HBox** e **StackPane**.
+Depois de tanto conceito e uma pequena exploração da API, vamos criar aplicações simples que usam essas classes e dessa forma vamos ver em ação tudo que falamos, tornando mais prazeroso o aprendizado e a exploração da API. Nesse capítulo vamos mostrar só três classes: **VBox**, **HBox** e **StackPane**.
 
 #### VBox
 Um dos gerenciadores mais simples, a classe VBox simplesmente alinha os componentes verticalmente e permite determinar o espaçamento entre eles e ainda o alinhamento. Abaixo um código que simplesmente adiciona umas forma geométricas a uma VBox e em seguida a explicação do mesmo.

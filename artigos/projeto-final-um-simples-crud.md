@@ -16,7 +16,7 @@ CRUD é uma sigla que vem das operações básicas que podemos fazer um algo arm
 
 ### Onde armazenar os dados?
 
-A fonte de dados pode ser um banco de dados\(MySQL, MariaDB, Postgres, etc\), um arquivo\(arquivos em diversos formatos, como CSV\), um Web Service \(que após chamado, salva os dados em algum lugar\) ou até mesmo a própria memória dinâmica do computador\(sendo que os dados se perdem quando a aplicação é fechada\). Aqui vamos usar um arquivo CSV, uma forma simples de armazenar objetos em um arquivo de texto.
+A fonte de dados pode ser um banco de dados\(MySQL, MariaDB, Postgres, etc\), um arquivo \(arquivos em diversos formatos, como CSV\), um Web Service \(que após chamado, salva os dados em algum lugar\) ou até mesmo a própria memória dinâmica do computador \(sendo que os dados se perdem quando a aplicação é fechada\). Aqui vamos usar um arquivo CSV, uma forma simples de armazenar objetos em um arquivo de texto.
 
 O motivo de não usarmos um banco de dados tradicional é que o foco do artigo é mostrar JavaFX. Um banco de dados comum implica em termos que falar de SQL, conexão com o banco, select, etc, isso vai fugir do foco.
 
@@ -43,9 +43,7 @@ A lógica da aplicação é a seguinte:
 
 ### **Fazendo as operações com o banco de dados**
 
-As operações em sí com o banco ficam na interface ContasService. Ela contém os métodos **salvar**, que recebe uma instância de conta a ser salva, **atualizar, **  que recebe a conta já salva para ser atualizada, **apagar,** que apaga uma conta e **buscarTodos,**
-
-que retorna todas as contas selecionadas. É nessa classe que fazemos as operações.
+As operações em sí com o banco ficam na interface ContasService. Ela contém os métodos **salvar**, que recebe uma instância de conta a ser salva, **atualizar, **  que recebe a conta já salva para ser atualizada, **apagar,** que apaga uma conta e **buscarTodos,** que retorna todas as contas selecionadas. É nessa classe que fazemos as operações.
 
 Todo o código poderia ficar dentro do controller, MAS ISSO É COISA FEIA, temos que definir os métodos em uma interface e, vejam que interessante, usando a capacidade do Java 8 de definir métodos padrões, criamos um método **getInstance** para retornar a implementação que queremos dessa interface. Assim, criamos a clase ContasCSVService, que é uma implementação da interface, e retornamos uma nova instância nesse método! Podemos, obviamente, criar uma interface, por exemplo ** ContasBDService** que faria a mesma coisa, mas que invés de usar um arquivo CSV, se comunica com um banco de dados, a mesma ideia poderia ser aplicada para um arquivo XLS, como **ContasXLSService,** e por aí vai. O código do controller, que os métodos da interface, não iria sofrer nenhuma modificação, pois só precisaríamos trocar a intância de **ContasService** retornada no método **getNewInstance**! \(claro que com [CDI](http://aprendendo-javaee.blogspot.com.br/2012/09/primeiros-passos-com-cdi.html) e outras tecnologias, sequer criar manualmente precisaríamos\). Veja a nossa interface:
 
@@ -55,7 +53,7 @@ Todo o código poderia ficar dentro do controller, MAS ISSO É COISA FEIA, temos
 
 Agora, depois desse mooonnnntteee de papo, vamos ao código. Claro que se você leu acima com atenção, vai ser muito simples de entender tudo, mas mesmo assim o código está comentado na medida do possível.
 
-Não vou colocar o todo código nesse capítulo, pois já está muito extenso, mas veja o código da classe Conta, da interface **ContasService** e da classe **ContasController**. Note que você pode encontrar o código no anexo _**javafx-pratico.zip **\_no pacote _**javafxpratico.crud**\_.
+Não vou colocar o todo código nesse capítulo, pois já está muito extenso, mas veja o código da classe Conta, da interface **ContasService** e da classe **ContasController**. Note que você pode encontrar o código no anexo **javafx-pratico.zip ** no pacote **javafxpratico.crud**.
 
 ```java
 import java.util.Date;

@@ -16,7 +16,7 @@ java.lang.Object
       javafx.scene.control.Control
 ```
 
-Logos todos os controles usufruem com atributos como _height_, _maxHeight_, _width_, _minWidth_, entre outros.
+Logo todos os controles usufruem com atributos como _height_, _maxHeight_, _width_, _minWidth_, entre outros.
 
 Os controles são muito fáceis de lidar, no entanto, muitos tem suas características especifícas, o que leva a uma complicação maior somente para um capítulo, então iremos separar a abordagem dos controles em vários, nesse iremos abordar "Rótulos, campos de texto,  separadores e controles deslizantes".
 

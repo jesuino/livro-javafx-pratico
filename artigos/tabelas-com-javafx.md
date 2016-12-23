@@ -31,9 +31,7 @@ Uma tabela tem colunas e linhas. Quando configuramos as colunas de uma [TableVie
 
 ####  Colunas
 
- As colunas são definidades pela classe [TableColumn](http://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TableColumn.html) e devem saber lidar com cada linha da tabela. Isso é feito através de fábricas de células, que são classes que recebem cada item da tabela e retornam uma [célula da tabela](http://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TableCell.html)
-
-. A fábrica você deve fornecer ou usar algumas colunas que já sabem fabricar as células de um tipo já conhecido. Veja um exemplo onde criamos colunas para as propriedades nome, idade e email de uma pessoa:
+ As colunas são definidades pela classe [TableColumn](http://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TableColumn.html) e devem saber lidar com cada linha da tabela. Isso é feito através de fábricas de células, que são classes que recebem cada item da tabela e retornam uma [célula da tabela](http://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TableCell.html). A fábrica você deve fornecer ou usar algumas colunas que já sabem fabricar as células de um tipo já conhecido. Veja um exemplo onde criamos colunas para as propriedades nome, idade e email de uma pessoa:
 
 ```java
 colunaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));

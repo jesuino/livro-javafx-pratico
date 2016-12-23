@@ -96,8 +96,8 @@ public class ImagemFigurasGeometricas extends Application {
 ```
 1. Nessa linha carregamos nossa imagem usando uma URL da internet. Lembrando que essa não é a única maneira, podemos também usar um arquivo ou qualquer coisas que forneça um InputStream;
 2. Agora criamos o nó da imagem e informamos que imagem será mostrada no construtor;
-3. Usamos uma propriedade nova nessa linha e ela nem é só do ImageView, é da classe Node! Com o *translateX* informamos a posição X(imagine o posicionamento como um plano cartesiano) de um componente no pai. O método set serve para configurar um valor, você já viu o uso dele em classes como o Stage;
-4. Fazemos o mesmo descrito em 3, mas agora para a posição Y. ATENÇÃO: Posicionar componentes assim não é legal de ser feito em aplicações grandes, vamos mostrar em breve os gerenciadores de leiaute do JavaFX;
+3. Usamos uma propriedade nova nessa linha e ela nem é só do ImageView, é da classe Node! Com o *translateX* informamos a posição X (imagine o posicionamento como um plano cartesiano) de um componente no pai. O método set serve para configurar um valor, você já viu o uso dele em classes como o Stage;
+4. Fazemos o mesmo descrito em 3, mas agora para a posição Y. ATENÇÃO: Posicionar componentes assim não é legal de ser feito em aplicações grandes, vamos mostrar em breve os gerenciadores de layout do JavaFX;
 5. Aqui já estamos criando uma forma geométrica, um Retângulo (**Rectangle**). De acordo com a forma criada, teremos parâmetros que devem ser informados. No caso do retângulo, informamos a largura e a altura;
 6. Mudamos a cor padrão da forma geométrica (preta) para verde. Note que aqui usamos uma constante da classe **javafx.scene.paint.Color**;
 7. É informado a cor da linha que envolve essa forma geométrica, nesse caso: preta;

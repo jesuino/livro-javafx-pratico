@@ -2,7 +2,7 @@
 
 Tocar vídeo em JavaFX é tão simples que chega a assustar quem já tentou tocar um vídeo usando Java. Nós só temos que seguir três pequenos passos:
 
-* **Carregar**: Você primeiramente deve carregar a mídia que vai tocar. A mídia pode estar no seu disco rígido como em um um servidor remoto(carregando assim através da sua URL);
+* **Carregar**: Você primeiramente deve carregar a mídia que vai tocar. A mídia pode estar no seu disco rígido como em um um servidor remoto (carregando assim através da sua URL);
 * **Tocar**. A partir da mídia, você deverá controlar a mesma: tocar, parar, pausar...
 * **Mostrar**: Nesse ponto iremos colocar o vídeo dentro de sua aplicação JavaFX.
 
@@ -45,7 +45,7 @@ public class TocandoVideo extends Application {
 		palco.setScene(cena);
 		palco.show();
 
-		mediaPlayer.play(); // 4
+		mediaPlayer.play(); // 5 
 	}
 }
 ```

@@ -50,7 +50,7 @@ public class DigaOlaComJavaFX extends Application {
 }
 ```
 
-Essa é uma aplicação simples, temos poucos componentes e um leiaute muito fácil de se montar. Mas e quando temos aplicações cheia de controles e leiaute complexo?
+Essa é uma aplicação simples, temos poucos componentes e um layout muito fácil de se montar. Mas e quando temos aplicações cheia de controles e layout complexo?
 
 ![](/imagens/telas/appjavaSimples.png)
 
