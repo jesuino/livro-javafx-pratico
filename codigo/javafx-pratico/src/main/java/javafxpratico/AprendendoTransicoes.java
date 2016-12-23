@@ -1,5 +1,7 @@
 package javafxpratico;
 
+import java.util.stream.Stream;
+
 import javafx.animation.Animation.Status;
 import javafx.animation.FadeTransition;
 import javafx.animation.FillTransition;
@@ -8,8 +10,6 @@ import javafx.animation.ScaleTransition;
 import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -82,19 +82,16 @@ public class AprendendoTransicoes extends Application {
 		HBox hbTopo = new HBox(10);
 		hbTopo.setSpacing(10);
 		hbTopo.setAlignment(Pos.CENTER);
-		Transicoes[] TiposTransicoes = Transicoes.values();
+		Transicoes[] transicoes = Transicoes.values();
 		// grupo para todas as transições
 		botoesTransicao = new ToggleGroup();
-		for (int i = 0; i < TiposTransicoes.length; i++) {
-			Transicoes t = TiposTransicoes[i];
+		Stream.of(transicoes).map(t -> {
 			ToggleButton tb = new ToggleButton(t.name());
 			tb.setUserData(t);
-			if (i == 0) {
-				tb.setSelected(true);
-			}
 			tb.setToggleGroup(botoesTransicao);
-			hbTopo.getChildren().add(tb);
-		}
+			return tb;
+		}).forEach(hbTopo.getChildren()::add);
+		botoesTransicao.getToggles().get(0).setSelected(true);
 		return hbTopo;
 	}
 
@@ -115,42 +112,27 @@ public class AprendendoTransicoes extends Application {
 
 		// setando as ações. Muito código gasto aqui! Poderíamos ter só uma ação
 		// e setar a mesma em todos os botões ou usar os lambdas no Java 8
-		btnParar.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent e) {
-				transicaoAtual.stop();
-			}
-		});
-		btnTocar.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent e) {
-				// antes de tocar, pegamos a mais nova transição selecionada
-				Transicoes t = (Transicoes) botoesTransicao.getSelectedToggle().getUserData();
-				transicaoAtual = FabricaTransicao.fazerTransicao(t, sldTempo.getValue(), alvo);
-				// lógicas de habilitação dos botões, temos que setar todas as
-				// vezes pq trocamos as transições
-				btnParar.disableProperty().bind(transicaoAtual.statusProperty().isNotEqualTo(Status.RUNNING));
-				btnTocar.disableProperty().bind(transicaoAtual.statusProperty().isEqualTo(Status.RUNNING));
-				btnPausar.disableProperty().bind(transicaoAtual.statusProperty().isNotEqualTo(Status.RUNNING));
-				btnAjusta.disableProperty().bind(transicaoAtual.statusProperty().isEqualTo(Status.RUNNING));
-				sldTempo.disableProperty().bind(transicaoAtual.statusProperty().isEqualTo(Status.RUNNING));
-				System.out.println("Tocando transição " + t);
-				transicaoAtual.play();
-			}
-		});
-		btnPausar.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent e) {
-				transicaoAtual.pause();
-			}
-		});
-		btnAjusta.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent e) {
-				criaNoAlvo();
-			}
-		});
+		btnParar.setOnAction(e -> transicaoAtual.stop());
+		btnTocar.setOnAction(e -> acaoTocar(btnParar, btnTocar, btnPausar, btnAjusta));
+		btnPausar.setOnAction(e -> transicaoAtual.pause());
+		btnAjusta.setOnAction(e -> criaNoAlvo());
 		return hbBotoes;
+	}
+
+	private void acaoTocar(final Button btnParar, final Button btnTocar, final Button btnPausar,
+			final Button btnAjusta) {
+		// antes de tocar, pegamos a mais nova transição selecionada
+		Transicoes t = (Transicoes) botoesTransicao.getSelectedToggle().getUserData();
+		transicaoAtual = FabricaTransicao.fazerTransicao(t, sldTempo.getValue(), alvo);
+		// lógicas de habilitação dos botões, temos que setar todas as
+		// vezes pq trocamos as transições
+		btnParar.disableProperty().bind(transicaoAtual.statusProperty().isNotEqualTo(Status.RUNNING));
+		btnTocar.disableProperty().bind(transicaoAtual.statusProperty().isEqualTo(Status.RUNNING));
+		btnPausar.disableProperty().bind(transicaoAtual.statusProperty().isNotEqualTo(Status.RUNNING));
+		btnAjusta.disableProperty().bind(transicaoAtual.statusProperty().isEqualTo(Status.RUNNING));
+		sldTempo.disableProperty().bind(transicaoAtual.statusProperty().isEqualTo(Status.RUNNING));
+		System.out.println("Tocando transição " + t);
+		transicaoAtual.play();
 	}
 
 	/**
@@ -211,6 +193,8 @@ public class AprendendoTransicoes extends Application {
 				translateTransition.setDuration(duracao);
 				translateTransition.setNode(alvo);
 				t = translateTransition;
+				break;
+			default:
 				break;
 			}
 			t.setAutoReverse(true);
