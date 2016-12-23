@@ -1,6 +1,6 @@
 # JavaFX Prático
 
-Um livro rápido, direto, sem muita enrolação. Objetivo é introduzir os conceitos da plataforma JavaFX com evolução natural dos conceitos sem que haja buracos no aprendizado dos componentes básicos da plataforma.
+Um livro rápido, direto, sem muita enrolação. Objetivo é introduzir as classes mais básicas da plataforma JavaFX com evolução natural dos conceitos sem que haja buracos no aprendizado dos componentes básicos da plataforma.
 
 Notem que esse livro é baseado no blog [Aprendendo JavaFX](http://aprendendo-javafx.blogspot.com.br/), mas revisado, editado e formatado para ficar no formato de um livro!
 
@@ -17,15 +17,11 @@ O livro não está organizando em capítulos. Pelo contrário, vamos em uma orde
 
 Inicialmente teremos explicações mais extensas e detalhadas, no decorrer do livro, saí o texto, entram explicações breves e mais código.
 
-Espero que o leitor seja curioso e pró-ativo: Abra os links e leia a documentação;  Edite o código; crie coisas legais para você com os exemplos que encontrar. 
+Espero que o leitor seja curioso e pró-ativo: Abra os links e leia a documentação;  Edite o código; crie coisas legais para você com os exemplos que encontrar.
 
 ## Código
 
 Há exemplos de código em todos os capítulos e estão estão em um projeto Maven que poderá ser baixado em [http://aprendendo-javafx.blogspot.com](http://aprendendo-javafx.blogspot.com).
 
-Em um anexo você encontra _**javafx-pratico.zip **_e nesse arquivo há todo o código organizado e testado. Cabe a você explorar.
-
-
-
-
+Em um anexo você encontra **javafx-pratico.zip **\_e nesse arquivo há todo o código organizado e testado. Cabe a você explorar.
 
